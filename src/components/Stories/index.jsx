@@ -41,32 +41,45 @@ function Stories({allUsers}) {
           <AiOutlinePlus/>
         </p>
       </div>
-  
-      <Swiper
-        slidesPerView={4}
-        spaceBetween={10}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode]}
-        className={c.mySwiper}
-      >
-        {
-          data?.map((item, i) => (
-           <SwiperSlide key={i}>
-             <StoriesItem
-               userId={item.user}
-               key={i}
-               allUsers={allUsers}
-               storiesId={item.id}
-               setOpen={setStoriesView}
-               setSingleStories={setSingleStories}
-             />
-           </SwiperSlide>
+      {
+        data?.length > 4 ?
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={10}
+            freeMode={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[FreeMode]}
+            className={c.mySwiper}
+          >
+            {
+              data?.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <StoriesItem
+                    userId={item.user}
+                    key={i}
+                    allUsers={allUsers}
+                    storiesId={item.id}
+                    setOpen={setStoriesView}
+                    setSingleStories={setSingleStories}
+                  />
+                </SwiperSlide>
+              ))
+      
+            }
+          </Swiper>
+          : data?.map((item, i) => (
+            <StoriesItem
+              userId={item.user}
+              key={i}
+              allUsers={allUsers}
+              storiesId={item.id}
+              setOpen={setStoriesView}
+              setSingleStories={setSingleStories}
+            />
           ))
-        }
-      </Swiper>
+      }
     </div>
   );
 }
