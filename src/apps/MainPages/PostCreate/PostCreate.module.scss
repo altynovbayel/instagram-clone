@@ -1,0 +1,33 @@
+.create{
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 30px;
+  h2{
+    text-align: center;
+  }
+  .container, .create_btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .create_input{
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      input{
+        height: 30px;
+        width: 200px;
+        padding: 5px 10px;
+        border-radius: 8px;
+      }
+    }
+  }
+  .create_btn{
+    button{
+      background-color: #0095F6;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 7px 16px;
+      border-radius: 8px;
+    }
+  }
+}

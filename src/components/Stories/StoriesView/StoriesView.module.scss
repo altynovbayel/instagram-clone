@@ -1,0 +1,37 @@
+.view{
+  .view_background{
+    background-color: #0B0705;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 2;
+  }
+  .close{
+    right: 30px;
+    top: 10px;
+    position: fixed;
+    z-index: 10;
+    svg{
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  .stories{
+    width: 350px;
+    height: 450px;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

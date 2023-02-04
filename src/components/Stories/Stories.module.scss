@@ -1,0 +1,26 @@
+.stories{
+  background-color: #000;
+  width: 470px;
+  height: 120px;
+  padding-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  .stories_add{
+    width: 80px;
+    height: 70px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+    span{
+      border-radius: 50%;
+      overflow: hidden;
+      img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+    }
+  }
+}
